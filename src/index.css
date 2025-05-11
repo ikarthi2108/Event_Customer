@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  @apply bg-gray-900 text-white;
+}
+
+/* Custom component styles */
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Transitions */
+.transition-theme {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
