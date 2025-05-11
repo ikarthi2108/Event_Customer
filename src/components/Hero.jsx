@@ -3,13 +3,15 @@ import { useNavigate } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 import Select from "./UI/Select";
 import Button from "./UI/Button";
-import { cities, vendorCategories } from "../utils/constants";
+import { districts, vendorCategories } from "../utils/constants";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Hero = () => {
   const { darkMode } = useTheme();
   const [showChat, setShowChat] = useState(false);
+  const [selectedVendor, setSelectedVendor] = useState("");
+  const [selectedDistrict, setSelectedDistrict] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -31,7 +33,11 @@ const Hero = () => {
   }, [showChat]);
 
   const handleFindVendors = () => {
-    navigate("/venues");
+    if (selectedVendor && selectedDistrict) {
+      navigate(`/venues?vendor=${selectedVendor}&district=${selectedDistrict}`);
+    } else {
+      alert("Please select both a vendor category and a district.");
+    }
   };
 
   return (
@@ -93,17 +99,21 @@ const Hero = () => {
                   options={vendorCategories}
                   placeholder="All Vendors"
                   darkMode={darkMode}
+                  value={selectedVendor}
+                  onChange={(e) => setSelectedVendor(e.target.value)}
                 />
               </div>
 
               <div className="col-span-1">
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                  Wedding City
+                  Wedding District
                 </label>
                 <Select
-                  options={cities}
-                  placeholder="All Cities"
+                  options={districts}
+                  placeholder="All Districts"
                   darkMode={darkMode}
+                  value={selectedDistrict}
+                  onChange={(e) => setSelectedDistrict(e.target.value)}
                 />
               </div>
 
@@ -150,7 +160,7 @@ const Hero = () => {
               data-aos-delay="600"
               className="flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 hover:bg-white/30 transition-all duration-300"
             >
-              <span className="text-white">⭐ 50+ Major Cities</span>
+              <span className="text-white">⭐ 50+ Major Districts</span>
             </div>
             <div
               data-aos="fade-up"
@@ -182,48 +192,6 @@ const Hero = () => {
         data-aos-easing="ease-in-sine"
         className="absolute top-1/2 right-1/4 w-8 h-8 rounded-full bg-white/10 hidden md:block"
       ></div>
-
-      {/* Help Button with animation */}
-      <div className="fixed bottom-8 right-8 z-50">
-        <div className="relative">
-          {showChat && (
-            <div
-              data-aos="fade-up"
-              data-aos-duration="300"
-              className="absolute bottom-16 right-0 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-xl w-64"
-            >
-              <p className="text-gray-800 dark:text-gray-200 text-sm mb-2">
-                Need assistance with planning?
-              </p>
-              <p className="text-gray-600 dark:text-gray-400 text-xs">
-                Our wedding experts are here to help. We'll get back to you
-                within 24 hours.
-              </p>
-            </div>
-          )}
-          {/* <Button
-            variant="primary"
-            className="rounded-full p-4 animate-pulse shadow-lg"
-            onClick={() => setShowChat(!showChat)}
-            data-aos="zoom-in"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
-              />
-            </svg>
-          </Button> */}
-        </div>
-      </div>
     </div>
   );
 };
