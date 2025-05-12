@@ -49,7 +49,7 @@ const Hero = () => {
     <div className="relative bg-[#1A3C34] min-h-screen">
       {/* Background image */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[#1A3C34]/96 z-10"></div>
+        <div className="absolute inset-0 bg-[#1A3C34]/97 z-10"></div>
         <img
           src={Hero_BG}
           alt="Wedding celebration"
@@ -66,7 +66,7 @@ const Hero = () => {
           <div className="mb-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-[#D4AF37]"
+              className="h-6 w-6 text-[#c8a97e]"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -84,7 +84,7 @@ const Hero = () => {
           <h1
             data-aos="fade-up"
             data-aos-delay="200"
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 font-['Playfair_Display']"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 font-['Cormorant Garamond']"
           >
             You celebrate, we organize
           </h1>
@@ -103,7 +103,7 @@ const Hero = () => {
           <button
             data-aos="fade-up"
             data-aos-delay="400"
-            className="mb-8 px-6 py-2 border-2 border-[#D4AF37] text-[#D4AF37]  font-semibold uppercase tracking-wider hover:bg-[#D4AF37] hover:text-[#1A3C34] transition-all duration-300"
+            className="mb-8 px-6 py-2 border-2 border-[#c8a97e] text-[#c8a97e]  font-semibold uppercase tracking-wider hover:bg-[#D4AF37] hover:text-[#1A3C34] transition-all duration-300"
           >
             Discover Exclusive Event Packages
           </button>
@@ -182,49 +182,6 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Social Media Icons */}
-        <div className="absolute top-1/2 right-4 transform -translate-y-1/2 flex flex-col space-y-4">
-          <a
-            href="#"
-            className="text-white hover:text-[#D4AF37] transition-colors"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.41 2.87 8.16 6.84 9.49-.09-.08-.17-.36-.17-.71v-2.52c0-.61-.43-1.14-1.03-1.26-1.86-.37-3.22-1.61-3.22-3.39 0-.95.38-1.85 1.05-2.52-.11-.28-.34-.86.06-1.79 0 0 .57-.18 1.87.7.54-.15 1.12-.23 1.7-.23.58 0 1.16.08 1.7.23 1.3-.88 1.87-.7 1.87-.7.4.93.17 1.51.06 1.79.67.67 1.05 1.57 1.05 2.52 0 1.78-1.36 3.02-3.22 3.39-.6.12-1.03.65-1.03 1.26v2.52c0 .35-.08.63-.17.71 3.97-1.33 6.84-5.08 6.84-9.49 0-5.5-4.46-9.96-9.96-9.96zm-1.5 14.96v-2.52c0-.61.43-1.14 1.03-1.26 1.86-.37 3.22-1.61 3.22-3.39 0-.95-.38-1.85-1.05-2.52.11-.28.34-.86-.06-1.79 0 0-.57-.18-1.87.7-.54-.15-1.12-.23-1.7-.23-.58 0-1.16.08-1.7.23-1.3-.88-1.87-.7-1.87-.7-.4.93-.17 1.51-.06 1.79-.67.67-1.05 1.57-1.05 2.52 0 1.78 1.36 3.02 3.22 3.39.6.12 1.03.65 1.03 1.26v2.52c0 .35-.08.63-.17.71-.47.08-.96.13-1.46.13z" />
-            </svg>
-          </a>
-          <a
-            href="#"
-            className="text-white hover:text-[#D4AF37] transition-colors"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 5.5 4.46 9.96 9.96 9.96s9.96-4.46 9.96-9.96c0-5.5-4.46-9.96-9.96-9.96zm1.54 16.46v-5.66h1.89l.28-2.2h-2.17v-1.4c0-.64.18-1.07 1.09-1.07h1.16v-1.97c-.2-.03-.89-.08-1.69-.08-1.67 0-2.81 1.02-2.81 2.89v1.62h-1.89v2.2h1.89v5.66c-.76.12-1.54.12-2.31 0z" />
-            </svg>
-          </a>
-          <a
-            href="#"
-            className="text-white hover:text-[#D4AF37] transition-colors"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.41 2.87 8.16 6.84 9.49-.09-.08-.17-.36-.17-.71v-2.52c0-.61-.43-1.14-1.03-1.26-1.86-.37-3.22-1.61-3.22-3.39 0-.95.38-1.85 1.05-2.52-.11-.28-.34-.86.06-1.79 0 0 .57-.18 1.87.7.54-.15 1.12-.23 1.7-.23.58 0 1.16.08 1.7.23 1.3-.88 1.87-.7 1.87-.7.4.93.17 1.51.06 1.79.67.67 1.05 1.57 1.05 2.52 0 1.78-1.36 3.02-3.22 3.39-.6.12-1.03.65-1.03 1.26v2.52c0 .35-.08.63-.17.71 3.97-1.33 6.84-5.08 6.84-9.49 0-5.5-4.46-9.96-9.96-9.96zm-1.5 14.96v-2.52c0-.61.43-1.14 1.03-1.26 1.86-.37 3.22-1.61 3.22-3.39 0-.95-.38-1.85-1.05-2.52.11-.28.34-.86-.06-1.79 0 0-.57-.18-1.87.7-.54-.15-1.12-.23-1.7-.23-.58 0-1.16.08-1.7.23-1.3-.88-1.87-.7-1.87-.7-.4.93-.17 1.51-.06 1.79-.67.67-1.05 1.57-1.05 2.52 0 1.78 1.36 3.02 3.22 3.39.6.12 1.03.65 1.03 1.26v2.52c0 .35-.08.63-.17.71-.47.08-.96.13-1.46.13z" />
-            </svg>
-          </a>
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../assets/evnzon-logo.png"; // Logo import
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,13 +10,13 @@ const Navbar = () => {
       <div className="container mx-auto px-4 ">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center ">
+          <Link to="/" className="flex items-center ">
             <img
               src={Logo}
               alt="Evnzon Logo"
               className="h-18 w-auto" // Increased from h-8 to h-12
             />
-          </div>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
